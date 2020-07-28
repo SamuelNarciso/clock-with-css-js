@@ -1,0 +1,126 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: monospace;
+}
+body {
+	background: #8e2de2;
+	background-image: url('../img/Amin.jpg');
+	background-size: cover;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.clock {
+	background: #e4f9ff;
+	border: 15px solid #393e46;
+	border-radius: 50%;
+	margin: 60px auto;
+
+	height: 30rem;
+	width: 30rem;
+}
+
+.clock .clock-face {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: translateY(-3px);
+}
+
+.clock .clock-face:before {
+	background: #393e46;
+	border-radius: 50%;
+	content: '';
+	height: 15px;
+	left: 48%;
+	position: absolute;
+	top: 48%;
+	width: 15px;
+	z-index: 10000;
+}
+
+.hand {
+	background: #262729;
+	border-radius: 50% 0 0 50%;
+	left: 20%;
+	position: absolute;
+	top: 50%;
+	transform-origin: 100%;
+	transition: all 0.5s;
+	transition-timing-function: ease-in-out;
+	transform: rotate(90deg);
+}
+
+#hour-hand {
+	left: 29.5%;
+	width: 20%;
+	height: 6px;
+}
+#min-hand {
+	background: #00a0abe5;
+	height: 6px;
+	width: 30%;
+}
+#sec-hand {
+	background: #b83b5fec;
+	height: 2px;
+	width: 30%;
+}
+
+.digitalHour {
+	background: #e0f2f7;
+	border: 3px solid #abc0c57a;
+	left: 36%;
+	position: absolute;
+	padding: 8px 0;
+	text-align: center;
+	top: 80%;
+	width: 25%;
+	font-size: 14px;
+}
+
+#hour {
+	font-weight: bolder;
+	margin-right: -5px;
+}
+#minute {
+    margin-left: -5px;
+}
+#second {
+    color: #b83b5f;
+	font-weight: lighter;
+    padding-left: 5px;
+    border-left: 2px solid #26272965;
+}
+
+#author{
+    position: absolute;
+    left: 31%;
+    top: 10%;
+    color: #262729c0;
+    letter-spacing: 2.5px;
+    font-size: 26px;
+}
+
+@media only screen and (max-width: 420px){
+    .clock{
+        height: 25rem;
+        width: 25rem;
+    }
+}
+@media only screen and (max-width: 350px){
+    .clock{
+        height: 20rem;
+        width: 20rem;
+    }
+    #author{
+    left: 27%;
+        font-size: 20px;
+    }
+    .digitalHour{
+        top: 73%;
+    }
+}
